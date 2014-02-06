@@ -1,0 +1,530 @@
+
+<html>
+<head>
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+        <script src="js/bootstrap.min.js"></script>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-2.1.0.min.js"></script>
+    
+<script src="js/bootstrap-tooltip.js"></script>  
+<script src="js/bootstrap-popover.js"></script>
+
+<!---For JQuery Validation--->
+<link rel="stylesheet" href="css/screen.css" />
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<!-------- --->
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+    
+ <script>  
+$(function ()  
+{
+    $("#loginbox").hide();
+    $("#example").popover({
+        trigger:'click',
+        placement:'bottom',
+        html: true,
+        container: 'body',
+           template: '<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content" style="background-color: #E6E6E6">\
+                            \
+                            <input Style="width:240px" type="text" class="form-control" id="uname" placeholder="User Name | Email"/> \
+                            <br>\
+                             <input Style="width:240px" type="password" class="form-control" id="password" placeholder="Password"/>\ \
+                             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forgot Password?\
+                             <a>Forgot password?</a><br>\
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+                            <input type="submit" style="background-color: #CF0000;color:#FFFFFF;border: 0px;width: 120px;height: 30px;" value="LOGIN">\
+                              </div></div>'
+        });
+});  
+</script>
+ 
+ <script>
+    
+    var gen=0;
+    var sel_gen="";
+    function my(args) {
+       //alert(args.value)
+       sel_gen=args.value;
+       var bb=document.getElementsByTagName('button');
+       var chn=document.getElementsByClassName('chn');
+        for(var i=0;i<bb.length;i++)
+        {
+            bb[i].style.backgroundColor="#ffffff";
+            bb[i].style.color="#000000";
+        }
+        for(var i=0;i<chn.length;i++)
+        {
+            chn[i].style.backgroundColor="#cf0000";
+        }
+        args.style.backgroundColor="#cf0000";
+        args.style.color="#ffffff";
+       gen=1;
+        //code
+    }
+    
+    
+  
+    
+    /*
+     function Validtion_form()
+    {
+        var NAME = new RegExp("^[a-zA-Z'-]+$");
+        var EMAIL=new RegExp("/^[a-zA-Z0-9._]+[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/");
+        
+        
+        
+        var fname=document.getElementById('firstname');      
+        var lname=document.getElementById('lastname');
+        var emailid=document.getElementById('EmailID');
+        var password=document.getElementById('password');
+        var conf_password=document.getElementById('conf_password');
+        var select_profile=document.getElementById('Select_Profile');
+       
+        
+        if (emailid.value.match(EMAIL)) {            
+            //alert("successfully");
+           // return true;
+        }
+        else
+        {
+            //alert("Not match");
+            //return false;
+        }
+        
+        if (fname.value=="" || fname.value.length<=2 || !fname.value.match(NAME))
+        {
+            document.getElementById('error_fname').innerHTML="Please Enter First Name or Right Name";
+           // alert('Please Enter First Name');
+            fname.focus();
+            return false;
+        }
+        else
+        {
+             document.getElementById('error_fname').innerHTML="";
+              
+        }
+         if (lname.value=="" || lname.value.length<=2 || !lname.value.match(NAME))
+        {
+            document.getElementById('error_lname').innerHTML="Please Enter Last Name or Right Name";
+            //alert('Please Enter Last Name');error_lname
+            lname.focus();
+            return false;
+        }
+        else
+        {
+             document.getElementById('error_lname').innerHTML="";
+            
+        }
+        
+        //alert(password.value);
+        //alert(conf_password.value);
+        if (password.value!=conf_password.value)
+        {
+            document.getElementById('error_password').innerHTML="Please Enter Correct Password";
+            password.value="";
+            conf_password.value="";
+            password.focus();
+            return false;
+        }
+        else
+        {
+            if (password.value.length>=5 && password.value.length<=8) {
+                document.getElementById('error_password').innerHTML="";
+              
+            }
+            else
+            {
+                document.getElementById('error_password').innerHTML="Password Should Be more then 5 character & less then 8";
+                return false;
+            }
+        }
+        alert(select_profile.value);
+        if (select_profile.value=="Creating Profile For") {
+            
+            document.getElementById('error_profile').innerHTML="Please Select Right Profile";            
+            select_profile.focus();
+            return false;
+        }
+        else
+        {
+             document.getElementById('error_profile').innerHTML=""; 
+        }
+        
+        if (gen==0) {
+            document.getElementById('error_gender').innerHTML="Please Select Gender"; 
+            return false;
+        }
+        else
+        {
+            document.getElementById('error_gender').innerHTML=""; 
+        }
+        
+    }*/
+ </script>
+ 
+ 
+ <script>
+      //Jquery Validations
+      
+    $().ready(function() {
+       
+        $("#commentForm").validate();
+        
+        $("#reg_form").validate({
+	    rules: {   
+                       firstname:
+                        {
+                            required: true,
+                            minlength: 2,
+                            fname:true
+                        },
+                        lastname:
+                        {
+                            required: true,
+                            minlength: 2,
+                            fname:true
+                        },
+                        EmailID:
+                        {
+                            required: true,
+                            email: true
+                        },
+                        password:
+                        {
+                            required: true,
+                            minlength: 5,
+                            maxlength:8
+                        },
+                        conf_password:
+                        {
+                            required: true,
+                            minlength: 5,
+                            maxlength:8,
+                            equalTo: "#password"
+                        },
+                        mobile_no:
+                        {
+                            required: true,
+                            minlength: 10,
+                            maxlength:10,                           
+                            phonevalidation: true
+                        },
+                        Select_Profile:
+                        {
+                            required:true
+                        },
+                        Select_year:
+                        {
+                            required:true
+                        },
+                        Select_date:
+                        {
+                            required:true
+                        },                        
+                        Select_month:
+                        {
+                            required:true
+                        },
+                        
+                        
+                    },
+            messages:
+                    {
+                        firstname: {
+				required: "Please enter your First Name",
+				fname: "Please enter a valid name"
+			},
+			 lastname: {
+				required: "Please enter your First Name",
+				fname: "Please enter a valid name"
+			}
+                      
+                    },
+            
+    });
+    
+                    $.validator.addMethod("phonevalidation",
+                          function(value, element) {
+                                  return /^[7-9]{1}[0-9]{9}$/.test(value);
+                          },
+                  "Please enter a valid phone number."
+                  );
+                    
+                     $.validator.addMethod("fname",
+                          function(value, element) {
+                                  return /^[a-zA-Z'-]+$/.test(value);
+                          },
+                  "Please enter a name."
+                  );
+    });
+      
+ </script>
+</head>
+
+<body>
+    <div class="allPage">
+<div class="row" style="width: auto;margin-left: 2px;margin-right: 0px;">
+  <div class="col-md-5">24x7 Customer care chat </div>
+  <div class="col-md-4 col-sm-8"  style="margin-left: 11.45px"><img src="Images/unnamed.jpg" width="50px" height="50px"/></div>
+    
+    <div class="btn-group" style="text-align: right;">
+       
+    <a href="#" id="example" class="btn" rel="popover" data-content="" data-original-title="Login" style="text-decoration: none;" >
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Login</a>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      select Region
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Option 1</a></li>
+      <li><a href="#">Option 2k</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class=" title"  style="margin-top: -12px;">
+    <br>
+  <div class="col-md-12"><img src="Images/Malishubmangal_logo_large.png" height="54px" width="339px"/></div>
+  
+</div>
+
+<div class="row">
+  <div class="col-md-1  col-sm-3" style="margin-left: -15px;"><img src="Images/IMG_0020.jpg" height="138px" width="138px"> </div>
+  <div class="col-md-2 frmtitle"><span style="margin-top:10px;margin-left: -50px;"> REGISTRATION</span></div>
+
+  <div class="col-md-1  col-sm-2" style="background-color:#FF0000;padding: 0px;">  <img src="Images/SB phule.png" height="138px" width="145px"/></div>
+</div>
+
+<div class="ff">
+    
+    
+    <div class="mm">
+        
+   
+<div class="row row2">
+    
+  <div class="col-md-10 col-md-offset-2" style="margin-left: 25px;margin-top: -10px;margin-top: -50px;">
+   
+    <form id="reg_form" role="form" class="mainform">
+         <div class="form-group">
+            <label for="firstname"></label>
+    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+        
+  </div>
+        <div class="form-group">
+            <label for="lastname"></label>
+    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+        
+  </div>
+        
+        <div class="form-group">
+            <label for="EmailID"></label>
+    <input type="email" class="form-control" id="EmailID" name="EmailID" placeholder="Email">
+     
+  </div>
+        <div class="form-group">
+            <label for="password"></label>
+    <input type="password" class="form-control" id="password" name="password"  placeholder="Password">
+  </div>
+        
+           <div class="form-group">
+            <label for="conf_password"></label>
+    <input type="password" class="form-control" id="conf_password" name="conf_password" placeholder="Confirm Password">
+                   
+  </div>
+    
+    
+    <div class="form-group">
+         <label for="Select_Profile"></label>
+    <select class="form-control" id="Select_Profile" name="Select_Profile" style="width: 336px;height: 45px;">
+  <option value="">Creating Profile For</option>
+  <option value="option1">Option1</option>
+  <option value="option2">Option2</option>
+  <option value="option3">Option3</option>
+  <option value="option4">Option4</option>
+</select>
+    
+    </div>
+    <div class="form-group" style="text-align:left;">
+    <div class="btn-group chn">
+                <button type="button" onclick="my(this);" value="Male" class="btn btn-default" style="width:168px;height: 45px;background-color: #cf0000;color: #ffffff;">Male</button>
+                <button type="button"  onclick="my(this);" value="Female" class="btn btn-default" style="width:168px;height: 45px;">Female</button>
+                <span id="error_gender"></span>
+             </div>
+        </div>
+
+   <div class="row">
+    <div class="form-group" style="text-align:left;margin-left: -15px;">
+            <!-- Date -->
+            <!--<label for="Select_date"></label>
+            <label for="Select_year"></label>
+            <label for="Select_month"></label>-->
+             <div class="col-md-4">
+              <label for="Select_date"></label>
+            <select class="form-control" id="Select_date" name="Select_date" style="width: 100px;height: 45px;">
+            <option value="">Date</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="9">10</option>
+            </select>
+            </div>
+            <!--Month-->
+            <div class="col-md-4" style="text-align: left;">
+            <label for="Select_month"></label>
+            <select class="form-control" id="Select_month" name="Select_month" style="width: 100px;height: 45px;">
+            <option value="">Month</option>
+            <option value="1">Jan</option>
+            <option value="2">Feb</option>
+            <option value="3">Mar</option>
+            <option value="4">Apr</option>
+            <option value="5">May</option>
+            <option value="6">Jun</option>
+            <option value="7">Jul</option>
+            <option value="8">Aug</option>
+            <option value="9">Sept</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
+            </select>
+            </div>
+             <!-- Year -->
+             <div class="col-md-4" style="text-align: left;">
+            <label for="Select_year"></label>
+            <select class="form-control" id="Select_year" name="Select_year" style="width: 100px;height: 45px;">
+            <option value="">Year</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+            <option value="1993">1993</option>
+            <option value="1994">1994</option>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            </select>
+             </div>
+    </div>
+    </div>
+      <div class="form-group">
+             <label for="mobile_no"></label>
+    <input type="text" class="form-control" id="mobile_no" name="mobile_no" placeholder="Mobile No.">
+            
+  </div>
+      <div class="form-group" style="margin-left: 0px;">
+        <h6>click on submit button to accept term & conditions of</h6>       
+      </div>
+       <div class="form-group" style="margin-left: 10px;">    
+        <h6>malishubmangal.com</h6>
+      </div>
+         <div class="form-group">
+            <div class="btn-group" style="margin-left: 0px;">
+                <input type="submit" onclick="return Validtion_form()" style="background-color: #CF0000;border: none;color: #ffffff;width:120px;height: 33px;" value="Submit"/>
+            </div>
+         </div>
+       
+    </form>
+  </div>
+  </div>
+    </div>
+</div>
+
+<div class="ff4reg">
+    <div class="foot4reg">
+
+        <br>
+<div class="row" style="text-align: center;">
+  <div class="col-xs-2 col-sm-4">2065</div>
+  <div class="col-xs-2 col-sm-4">2065</div> 
+  <div class="col-xs-2 col-sm-4 ">2065</div>
+
+  <div class="col-xs-2 col-sm-4">BRIDES</div>
+  <div class="col-xs-2 col-sm-4">HAPPLY MARRIED</div>
+  
+  <div class="col-xs-2 col-sm-4 ">GROOMS</div>
+</div>
+    </div>
+</div>
+
+
+<div class="ff2">
+    <div class="foot2">
+<div class="row" style="text-align: center;">
+  <div class="col-md-2 col-sm-4">  </div>
+  <div class="col-md-8 col-sm-4"><h6>malishubmangal.com |2014</h6></div> 
+  <div class="col-md-2 col-sm-4 ">  </div>
+  </div>
+    </div>
+    
+    <div class="ff2">
+    <div class="foot2">
+  <div class="col-md-12 col-sm-4"> </div>
+  <div class="col-md-12 col-sm-4" style="text-align: center;">eSapines Technologies Pvt. Ltd.</div>
+  
+  <div class="col-md-2 col-sm-4 "> </div>
+    </div>
+    </div>
+      <div class="col-md-12 col-sm-8"> </div>
+  
+  <div class="col-md-12 col-sm-12" style="text-align: center;">&nbsp;&nbsp;About us | Term & Ploicies | coming Soon | career | Internship</div>
+  <div class="col-md-8 col-sm-8"> </div>
+
+ 
+</div>
+
+
+
+
+ </div><!---End of allPage div -->
+    
+    
+    
+ <div class="popover-content">
+ <div class="loginbox" id="loginbox" style="float: left;width: 35%;height: 33%;background-color: #E6E6E6;">
+        <form role="form" class="mainform" style="margin-left: 27px;margin-top: 30px;">
+            <div class="form-group">
+                <input type="text" class="form-control" id="uname" placeholder="User Name | Email"/>
+            </div>
+             <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password"/>
+            </div>
+             <div class="form-group">
+                <a href="#" ><span style="color:#4CA1CC;margin-left: 300px;margin-top: 1px;">Forgot Password?</span></a>
+            </div>
+            <div class="form-group">
+            <div class="btn-group" style="margin-left: 170px;">
+                <button type="submit" style="background-color: #CF0000;color:#FFFFFF;border: 0px;width: 120px;height: 30px;">LOGIN</button>
+                <br><br>
+            </div>
+         </div>
+           
+        </form>
+        
+  </div>
+ </div>
+</body>
+</html>

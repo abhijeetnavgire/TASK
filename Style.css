@@ -1,0 +1,343 @@
+/* CSS Document */
+body
+{
+padding:0px;
+margin: 0 0 0 0;
+
+}
+.container
+{
+height:100%;
+width:100%;
+}
+
+.header
+{
+width:100%;
+}
+.title
+{
+float: right;text-align:center;width:100%;background-color:#E6E6E6;display: block;
+}
+
+.pagetitle
+{
+float: right;text-align:center;width:100%;background-color:#E6E6E6;display: block;
+}
+.f1
+{
+float: left;text-align:left;width:20%;
+}
+.f2
+{
+float: left;text-align:center;width:50%;
+}
+.f3
+{
+float: left;text-align:right;width:30%;
+}
+
+.frm
+{
+
+width:100%;
+text-align:center;
+color:#FFFFFF;
+float:right;
+
+}
+.i1
+{
+height:0%;
+width:10%;
+text-align:left;
+float:left;
+}
+
+.frmtitle
+{
+    
+height:6%;
+min-height:3%;
+width:70.70%;
+float:left;
+text-align:center;
+color:#FFFFFF;
+background-color:#CF0000;
+margin-top: 0px;
+margin-left: 71px;
+font-family: fantasy;
+font-size: medium;
+}
+
+.frmtitleoth
+{
+    
+height:6%;
+min-height:3%;
+width:170%;
+float:left;
+text-align:center;
+color:#FFFFFF;
+background-color:#CF0000;
+margin-top: 0px;
+margin-left: 0px;
+font-family: fantasy;
+font-size: medium;
+}
+
+
+.i2
+{
+height:00%;
+width:10%;
+text-align:right;
+float:right;
+}
+
+.backgroundimg
+{
+ background-image:url("Images/Saptapadi.jpg");
+ background-repeat:repeat;
+ width:100%;
+ float:right;
+}
+
+
+.frmfooter
+{
+width:100%;
+float:right;
+color:#FFFFFF;
+background-color:#FF0000;
+}
+
+.main
+{
+float:right;
+width:100%;
+height:100%;
+text-align:center;
+
+}
+
+t1,t2,t3,t4,t5,t6,t7
+{
+text-align:left;
+}
+
+input[type=text],input[type=email],input[type=password]
+{
+width: 336px; text-align: center;
+}
+select
+{
+    width: 300px;
+    text-align: center;
+}
+input[type=button]
+{
+height: 45px;width:156px; text-align: center;
+}
+form-control button
+{
+    height: 45px;
+}
+.a1
+{
+    width:105px;
+    height: 45px;
+}
+.a2
+{
+    width:110px;
+    height: 45px;
+}
+.a3
+{
+    width:120px;
+    height: 45px;
+}
+.ff
+{
+  margin-top: -110px;
+    width: 100%;
+
+  background-image: url("Images/saptapadi03.jpg");
+ background-size:480px 460px;
+ 
+   border: 2px solid;
+   text-align: center;
+ margin-left: auto;
+}
+.mm
+{
+    background-color:#FFCF0D;
+    width: auto;
+    margin-left:300px;
+    margin-right: 370px;
+    position:relative;
+    text-align: center;
+    margin-top: 20px;
+   
+   
+}
+
+.foot
+{
+    background-color: red;
+    width: 50%;
+    margin-left:200px;
+    margin-top: -15px;
+    text-align: left;
+}
+
+
+
+.ff2{
+  
+    width: 100%; 
+}
+.foot2
+{
+   
+    width: 55%;
+    margin-left:200px;
+    margin-top: -15px;
+    text-align: left;
+}
+.ff3{
+  
+    width: 100%;
+    background-color: #CF0000;
+    color: white;
+    margin-left: 0px;
+}
+.foot3
+{
+   
+    width: 100%;
+    margin-left:8px;
+    margin-top: 18px;
+    text-align: left;
+    padding: 0px;
+}
+
+
+.ff4reg{
+  
+    width: 100%;
+    background-color: #CF0000;
+    color: white;
+    margin-left: 0px;
+}
+.foot4reg
+{
+   
+    width: 100%;
+    margin-left:8px;
+    margin-top: 0px;
+    text-align: left;
+    padding: 0px;
+}
+input[type="text"],input[type="email"],input[type="password"],select
+{
+   height: 45px;
+   
+}
+.row2
+{
+    width:130%;
+    
+     background-color:#FFCF0D;
+}
+.mainform
+{
+    margin-left: -20px;
+    margin-top: -10px;
+    width: 120%;
+}
+.row
+{
+   
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head
+{
+    background-color: #FFFFFF;
+}
+.page3
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: -80px;
+    background-color: #E6E6E6;
+}
+.page3form
+{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-bottom: 25%;
+    margin-right: auto;
+    background-color:#FFCF0D;
+    width:42%;
+    min-height: 20%;
+    max-height: 20%;
+     -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+    
+}
+
+
+.pagepassreset
+{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-bottom: 25%;
+    margin-right: auto;
+    background-color:#FFCF0D;
+    width:42%;
+    min-height: 20%;
+    max-height: 20%;
+     -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+    
+}
+
+.pagepassform
+{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-bottom: 25%;
+    margin-right: auto;
+    background-color:#FFCF0D;
+    width:45%;
+    min-height: 20%;
+    max-height: 20%;
+     -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;    
+}
+
+.verifactiontxt
+{
+    width: 10%;
+   
+}
+.loginbox
+{
+     -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+.allPage
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}

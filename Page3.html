@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Verification Mobile</title>
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="js/bootstrap.min.js"></script>
+        
+        
+        <!---For JQuery Validation--->
+<link rel="stylesheet" href="css/screen.css" />
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<!-------- --->
+
+<script>
+      //Jquery Validations
+      
+    $().ready(function() {
+       
+   $("#commentForm").validate();
+        
+        $("#verify_mobile").validate({
+	    rules:
+                    {   
+                       Verificationcode :
+                        {
+                            required: true
+                        }
+                    }
+        });
+    });
+</script>
+</head>
+
+<body>
+<div class="allPage"><!---Start of main Div --->
+<div class="row head" style="width: auto;margin-left: -10px;margin-right: 0px;">
+  <div class="col-md-5">24x7 Customer care chat </div>
+  <div class="col-md-4 col-sm-8" style="margin-left: 35px"><img src="Images/unnamed.jpg" width="50px" height="50px"/></div>
+
+     <div class="col-md-2 col-sm-8" style="text-align: right;">
+    <div class="btn-group">
+  
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      select Region
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Option 1</a></li>
+      <li><a href="#">Option 2k</a></li>
+    </ul>
+  </div>
+</div>
+    </div>
+</div>
+
+<div class="row pagetitle"  style="margin-top: -12px;">
+    <br>
+  <div class="col-md-12"><img src="Images/Malishubmangal_logo_large.png" height="54px" width="339px"/></div>
+  
+</div>
+
+
+<div class="row" style="width: 100.35%;height: 10%;">  
+  <div class="col-md-12 frmtitleoth" style="width: 99.60%;margin-left: 0px;margin-right: 0px;">
+  Verify Your Mobile</div>
+</div>
+
+
+
+<div class="row page3" style="height: auto;">
+  <div class="page3form">
+     <div><!---style=" margin-left: 15%;margin-top: 30%;text-align: left"--->
+        <br><br>
+        You will recive a verification code on your mobile<br>
+        number ends with xxxxxxxx18. Kindly enter the code<br>
+        below to verify your mobile number.
+     </div>
+     <div style=" margin-left: 10%;margin-top: 3%;text-align: left;"><!---"-->
+                <form id="verify_mobile" class="form-horizontal" role="form">
+           <div class="form-group">                
+                <div class="col-lg-2">
+                    <label for="Verificationcode"></label>
+                <input type="text" class="form-control " id="Verificationcode" name="Verificationcode" placeholder="Verification Code" style="width: 336px;border: groove 2px black;">
+                </div>
+           </div>
+                <span style="text-align: center;margin-left: 30px;">
+                Problem receiving code,<a>Resend the code</a> or
+                </span>
+                <div style="text-align: left;margin-left: 30px;">
+                <a>Change your mobile number</a>
+                </div>
+                
+                <div>
+                    <br>
+                        <div class="form-group">
+                        <div class="btn-group" style="margin-left: 210px;">
+                            <button type="submit" style="background-color: #CF0000;color: white;margin-left: -90px;width: 120px;height: 35px;border:0px;">VERIFY</button>
+                            <div>
+                                <br><br>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                </form>
+               
+     </div>
+  </div>
+  
+</div>
+
+
+<div class="ff3">
+    <div class="foot3">    
+   
+        <br>
+<div class="row" style="text-align: center;">
+  <div class="col-xs-2 col-sm-4">2065</div>
+  <div class="col-xs-2 col-sm-4">2065</div> 
+  <div class="col-xs-2 col-sm-4 ">2065</div>
+
+  <div class="col-xs-2 col-sm-4">BRIDES</div>
+  <div class="col-xs-2 col-sm-4">HAPPLY MARRIED</div>
+  
+  <div class="col-xs-2 col-sm-4 ">GROOMS</div>
+</div>
+    </div>
+</div>
+
+
+<div class="ff2">
+    <div class="foot2">
+<div class="row" style="text-align: center;">
+  <div class="col-md-2 col-sm-4">  </div>
+  <div class="col-md-8 col-sm-4"><h6>malishubmangal.com |2014</h6></div> 
+  <div class="col-md-2 col-sm-4 ">  </div>
+  </div>
+    </div>
+    
+    <div class="ff2">
+    <div class="foot2">
+  <div class="col-md-12 col-sm-4"> </div>
+  <div class="col-md-12 col-sm-4" style="text-align: center;">eSapines Technologies Pvt. Ltd.</div>
+  
+  <div class="col-md-2 col-sm-4 "> </div>
+    </div>
+    </div>
+      <div class="col-md-12 col-sm-8"> </div>
+  
+  <div class="col-md-12 col-sm-12" style="text-align: center;">&nbsp;&nbsp;About us | Term & Ploicies | coming Soon | career | Internship</div>
+  <div class="col-md-8 col-sm-8"> </div>
+
+ 
+</div>
+
+
+</div><!---End of main Div-->
+
+
+</body>
+</html>
