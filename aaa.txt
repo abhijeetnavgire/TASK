@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 This Is First Change.
+=======
+This Is First Change.
+
+sas
+>>>>>>> parent of 804377b... Change my text file
